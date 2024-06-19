@@ -1,0 +1,20 @@
+[
+  {
+    "idreserva": 1,
+    "fecha": "2022-01-01",
+    "fechaentrada": "2022-01-01",
+    "fechasalida": "2022-01-01",
+    "pago": 1,
+    "metodopago": "Ejemplo",
+    "observaciones": "Ejemplo",
+    "nhabitacion": 1,
+    "NIF": "Ejemplo",
+    "nombre": "Ejemplo",
+    "apellido1": "Ejemplo",
+    "apellido2": "Ejemplo",
+    "tipodocumento": "Ejemplo",
+    "nacionalidad": "Ejemplo",
+    "precio": 1,
+    "dias": 1
+  }
+]

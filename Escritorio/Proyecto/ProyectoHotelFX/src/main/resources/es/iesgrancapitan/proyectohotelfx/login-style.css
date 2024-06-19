@@ -1,0 +1,38 @@
+.login-izquierda{
+    -fx-background-color: linear-gradient(#d9ba7d, #ad935e);
+}
+
+BorderPane{
+    -fx-background-color:  #4c4c4c;
+}
+
+Button{
+    -fx-background-color: #d9ba7d;
+    -fx-text-fill: #4c4c4c;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 5, 0, 1, 1);
+}
+Button:hover{
+    -fx-cursor: hand;
+}
+Button:pressed {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0), 5, 0, 1, 1);
+}
+
+TextField, PasswordField{
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-radius: 0 ;
+    -fx-border-color: #1c1c1c;
+    -fx-text-fill: #ffffff;
+}
+
+TextField:focused, PasswordField:focused{
+    -fx-background-color: #545452;
+}
+
+.cardLogin{
+    -fx-background-color: #FAF9F6;
+    -fx-background-radius: 10;
+}

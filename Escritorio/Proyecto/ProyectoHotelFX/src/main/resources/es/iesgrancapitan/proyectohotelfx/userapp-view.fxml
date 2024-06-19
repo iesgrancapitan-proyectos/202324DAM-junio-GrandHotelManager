@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<TabPane prefHeight="720.0" prefWidth="1309.0" style="-fx-background-color: #e2e1df;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.iesgrancapitan.proyectohotelfx.controllers.AplicacionController">
+   <tabs>
+      <Tab closable="false" style="-fx-background-color: #ad935e; -fx-background-radius: 0;" text="Principal">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="461.0" prefWidth="732.0">
+               <children>
+                  <BorderPane layoutY="-0.8" prefHeight="697.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="-1.0">
+                     <top>
+                        <AnchorPane prefHeight="63.0" prefWidth="1280.0" style="-fx-background-color: #f6f6f6; -fx-border-color: grey;" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label fx:id="userLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="254.0" layoutY="22.0" prefHeight="20.0" prefWidth="464.0" textAlignment="RIGHT" textFill="#313638" AnchorPane.rightAnchor="20">
+                                 <font>
+                                    <Font name="Times New Roman" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label contentDisplay="RIGHT" layoutX="287.0" layoutY="21.0" styleClass="border-label" stylesheets="@style.css" text="Principal" textFill="#313638">
+                                 <font>
+                                    <Font name="Times New Roman" size="22.0" />
+                                 </font>
+                              </Label>
+                              <AnchorPane prefHeight="64.0" prefWidth="264.0" style="-fx-background-color: linear-gradient(to right, #d9ba7d, #ad935e);">
+                                 <children>
+                                    <ImageView fitHeight="64.0" fitWidth="96.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/hotel.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="70.0" layoutY="25.0" text="Sistema de gestion del Grand Hotel" textFill="#f6f6f6">
+                                       <font>
+                                          <Font name="Times New Roman" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </top>
+                     <left>
+                        <AnchorPane prefHeight="371.0" prefWidth="249.0" style="-fx-background-color: linear-gradient(#d9ba7d, #ad935e);" BorderPane.alignment="CENTER">
+                           <children>
+                              <ScrollPane hbarPolicy="NEVER" layoutX="1.0" prefHeight="498.0" prefWidth="261.0" style="-fx-background-color: transparent;" stylesheets="@style.css" vbarPolicy="NEVER">
+                                 <content>
+                                    <VBox alignment="TOP_CENTER" prefHeight="443.0" prefWidth="262.0" spacing="20.0" AnchorPane.bottomAnchor="0">
+                                       <children>
+                                          <AnchorPane prefHeight="106.0" prefWidth="262.0">
+                                             <children>
+                                                <Label layoutX="80.0" layoutY="71.0" text="Menú de opciones:" textFill="WHITE" />
+                                                <FontAwesomeIconView fill="WHITE" glyphName="GEAR" layoutX="105.0" layoutY="51.0" size="5em" textAlignment="CENTER" />
+                                                <Line endX="100.0" layoutX="131.0" layoutY="97.0" startX="-100.0" stroke="WHITE" strokeWidth="2.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <Button fx:id="infBtn" mnemonicParsing="false" onAction="#onInfBtn" prefHeight="36.0" prefWidth="246.0" styleClass="button-app" stylesheets="@style.css" text="Información" textFill="WHITE">
+                                             <graphic>
+                                                <FontAwesomeIconView fill="WHITE" glyphName="INFO" />
+                                             </graphic>
+                                             <font>
+                                                <Font name="Times New Roman" size="17.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="habBtn" mnemonicParsing="false" onAction="#onHabBtn" prefHeight="36.0" prefWidth="246.0" styleClass="button-app" stylesheets="@style.css" text="Habitaciones" textFill="WHITE">
+                                             <graphic>
+                                                <FontAwesomeIconView fill="WHITE" glyphName="HOTEL" />
+                                             </graphic>
+                                             <font>
+                                                <Font name="Times New Roman" size="17.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="clientesBtn" mnemonicParsing="false" onAction="#onClientesBtn" prefHeight="36.0" prefWidth="246.0" styleClass="button-app" stylesheets="@style.css" text="Clientes" textFill="WHITE">
+                                             <graphic>
+                                                <FontAwesomeIconView fill="WHITE" glyphName="USERS" />
+                                             </graphic>
+                                             <font>
+                                                <Font name="Times New Roman" size="17.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="reservasBtn" mnemonicParsing="false" onAction="#onReservasBtn" prefHeight="36.0" prefWidth="246.0" styleClass="button-app" stylesheets="@style.css" text="Reversas" textFill="WHITE">
+                                             <graphic>
+                                                <FontAwesomeIconView fill="WHITE" glyphName="FILE_TEXT" />
+                                             </graphic>
+                                             <font>
+                                                <Font name="Times New Roman" size="17.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="pedidosBtn" mnemonicParsing="false" onAction="#onPedidosBtn" prefHeight="36.0" prefWidth="246.0" styleClass="button-app" stylesheets="@style.css" text="Pedidos" textFill="WHITE">
+                                             <graphic>
+                                                <FontAwesomeIconView fill="WHITE" glyphName="COFFEE" />
+                                             </graphic>
+                                             <font>
+                                                <Font name="Times New Roman" size="17.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="btnEmpleados" disable="true" mnemonicParsing="false" onAction="#onEmpleadosBtn" prefHeight="36.0" prefWidth="246.0" styleClass="button-app" stylesheets="@style.css" text="Empleados" textFill="WHITE" visible="false">
+                                             <graphic>
+                                                <FontAwesomeIconView fill="WHITE" glyphName="INDUSTRY" />
+                                             </graphic>
+                                             <font>
+                                                <Font name="Times New Roman" size="17.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                       <padding>
+                                          <Insets top="10.0" />
+                                       </padding>
+                                    </VBox>
+                                 </content>
+                              </ScrollPane>
+                           </children></AnchorPane>
+                     </left>
+                     <center>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #e2e1df;" BorderPane.alignment="CENTER">
+                           <children>
+                              <ScrollPane fx:id="infPane" fitToWidth="true" hbarPolicy="NEVER" hmax="0.0" minHeight="0.0" prefHeight="0.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+                                 <content>
+                                  <AnchorPane fx:id="anchorPaneScroll" minHeight="0.0" minWidth="0.0" prefHeight="785.0" prefWidth="1003.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" styleClass="border-label" stylesheets="@style.css" text="Bienvenido">
+                                             <font>
+                                                <Font name="Arial" size="65.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="14.0" layoutY="95.0" text="Para comenzar a utilizar la aplicación pulse los botones deseados ubicados en la parte izquierda del programa">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="14.0" layoutY="159.0" styleClass="border-label" stylesheets="@style.css" text="Información General">
+                                             <font>
+                                                <Font name="Arial" size="50.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox layoutX="14.0" layoutY="226.0" prefHeight="100.0" spacing="50.0">
+                                             <children>
+                                                <AnchorPane minHeight="200.0" minWidth="349.0" prefHeight="200.0" prefWidth="349.0" stylesheets="@style.css">
+                                                   <styleClass>
+                                                      <String fx:value="card" />
+                                                      <String fx:value="shadow" />
+                                                   </styleClass>
+                                                   <children>
+                                                      <FontAwesomeIconView fill="WHITE" glyphName="USERS" layoutX="14.0" layoutY="122.0" size="64" />
+                                                      <Label layoutX="121.0" layoutY="165.0" text="Número de clientes totales" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="Arial" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="nClientesTotales" layoutX="303.0" layoutY="27.0" text="0" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="Arial" size="34.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane minHeight="200.0" minWidth="349.0" prefHeight="200.0" prefWidth="349.0" stylesheets="@style.css">
+                                                   <styleClass>
+                                                      <String fx:value="card" />
+                                                      <String fx:value="shadow" />
+                                                   </styleClass>
+                                                   <children>
+                                                      <FontAwesomeIconView fill="WHITE" glyphName="HOTEL" layoutX="14.0" layoutY="122.0" size="64" />
+                                                      <Label layoutX="87.0" layoutY="165.0" text="Número de habitaciones totales" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="Arial" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="nHabTotales" layoutX="303.0" layoutY="27.0" text="0" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="Arial" size="34.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane minHeight="200.0" minWidth="349.0" prefHeight="200.0" prefWidth="349.0" stylesheets="@style.css">
+                                                   <styleClass>
+                                                      <String fx:value="card" />
+                                                      <String fx:value="shadow" />
+                                                   </styleClass>
+                                                   <children>
+                                                      <FontAwesomeIconView fill="WHITE" glyphName="USERS" layoutX="14.0" layoutY="122.0" size="64" />
+                                                      <Label layoutX="83.0" layoutY="161.0" text="Número de empleados totales" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="Arial" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="nEmpleadosTotales" layoutX="303.0" layoutY="27.0" text="0" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="Arial" size="34.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="reloadInfBtn" layoutX="487.0" layoutY="175.0" mnemonicParsing="false" onAction="#actualizarDatos" styleClass="button-app" stylesheets="@style.css" textFill="WHITE">
+                                             <graphic>
+                                                <FontAwesomeIconView fill="WHITE" glyphName="ROTATE_RIGHT" styleClass="button-app" />
+                                             </graphic>
+                                          </Button>
+                                          <HBox layoutX="14.0" layoutY="512.0" prefHeight="100.0" spacing="50.0">
+                                             <children>
+                                                <AnchorPane minHeight="200.0" minWidth="349.0" prefHeight="200.0" prefWidth="349.0" stylesheets="@style.css">
+                                                   <styleClass>
+                                                      <String fx:value="card" />
+                                                      <String fx:value="shadow" />
+                                                   </styleClass>
+                                                   <children>
+                                                      <FontAwesomeIconView fill="WHITE" glyphName="CHECK_CIRCLE" layoutX="14.0" layoutY="122.0" size="64" />
+                                                      <Label layoutX="122.0" layoutY="164.0" text="Habitaciones disponibles" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="Arial" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="nHabDisponibles" layoutX="303.0" layoutY="27.0" text="0" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="Arial" size="34.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane minHeight="200.0" minWidth="349.0" prefHeight="200.0" prefWidth="349.0" stylesheets="@style.css">
+                                                   <styleClass>
+                                                      <String fx:value="card" />
+                                                      <String fx:value="shadow" />
+                                                   </styleClass>
+                                                   <children>
+                                                      <FontAwesomeIconView fill="WHITE" glyphName="UNLOCK" layoutX="14.0" layoutY="122.0" size="64" />
+                                                      <Label layoutX="117.0" layoutY="165.0" text="Habitaciones reservadas" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="Arial" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="nHabReservadas" layoutX="303.0" layoutY="27.0" text="0" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="Arial" size="34.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane minHeight="200.0" minWidth="349.0" prefHeight="200.0" prefWidth="349.0" stylesheets="@style.css">
+                                                   <styleClass>
+                                                      <String fx:value="card" />
+                                                      <String fx:value="shadow" />
+                                                   </styleClass>
+                                                   <children>
+                                                      <FontAwesomeIconView fill="WHITE" glyphName="LOCK" layoutX="14.0" layoutY="122.0" size="64" />
+                                                      <Label layoutX="122.0" layoutY="164.0" text="Habitaciones ocupadas" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="Arial" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="nHabOcupadas" layoutX="303.0" layoutY="27.0" text="0" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="Arial" size="34.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </ScrollPane>
+                              <ScrollPane fx:id="habPane" disable="true" fitToWidth="true" hbarPolicy="NEVER" hmax="0.0" minHeight="0.0" prefHeight="607.0" prefWidth="1031.0" vbarPolicy="ALWAYS" visible="false" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+                                 <content>
+                                    <AnchorPane fx:id="anchorPaneHabScroll" prefHeight="630.0" prefWidth="1016.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" styleClass="border-label" stylesheets="@style.css" text="Habitaciones">
+                                             <font>
+                                                <Font name="Arial" size="65.0" />
+                                             </font>
+                                          </Label>
+                                          <VBox fx:id="vboxHabitaciones" layoutX="30.0" layoutY="105.0" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" spacing="50.0">
+                                                   <children>
+                                                      <AnchorPane fx:id="habCard" minHeight="200.0" minWidth="349.0" prefHeight="200.0" prefWidth="349.0" stylesheets="@style.css">
+                                                         <styleClass>
+                                                            <String fx:value="card" />
+                                                            <String fx:value="shadow" />
+                                                         </styleClass>
+                                                         <children>
+                                                            <Label layoutX="121.0" layoutY="37.0" text="Habitación nº" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="Arial" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label fx:id="nHabCard" layoutX="316.0" layoutY="28.0" text="0" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="Arial" size="34.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <FontAwesomeIconView fill="WHITE" glyphName="HOTEL" layoutX="14.0" layoutY="176.0" size="64" />
+                                                            <Label layoutX="259.0" layoutY="153.0" text="Estado" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="Arial" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <Button fx:id="addHab" disable="true" layoutX="411.0" layoutY="39.0" mnemonicParsing="false" onAction="#onAddHabBtnClick" styleClass="button-app" visible="false">
+                                             <graphic>
+                                                <FontAwesomeIconView glyphName="PLUS" />
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </ScrollPane>
+                              <AnchorPane fx:id="reservasPane" disable="true" prefHeight="693.0" prefWidth="1032.0" visible="false" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+                                 <children>
+                                    <VBox layoutX="10.0" layoutY="89.0" prefHeight="628.0" prefWidth="1027.0" spacing="10.0" AnchorPane.bottomAnchor="50" AnchorPane.leftAnchor="14" AnchorPane.rightAnchor="14" AnchorPane.topAnchor="14">
+                                       <children>
+                                          <Label styleClass="border-label" stylesheets="@style.css" text="Reservas">
+                                             <font>
+                                                <Font name="Arial" size="65.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="Seleccione una reserva:" />
+                                          <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="1027.0" spacing="10.0">
+                                             <children>
+                                                <ComboBox fx:id="cbReservasPrin" maxWidth="1.7976931348623157E308" prefHeight="25.0" styleClass="text-field-info" AnchorPane.leftAnchor="0" HBox.hgrow="ALWAYS" />
+                                                <Button fx:id="btnInfoReserva" mnemonicParsing="false" prefHeight="27.0" prefWidth="27.0" styleClass="button-app">
+                                                   <graphic>
+                                                      <FontAwesomeIconView glyphName="INFO" />
+                                                   </graphic>
+                                                </Button>
+                                                <Button fx:id="btnDescargarPDF" mnemonicParsing="false" prefHeight="27.0" prefWidth="27.0" styleClass="button-app">
+                                                   <graphic>
+                                                      <FontAwesomeIconView glyphName="DOWNLOAD" />
+                                                   </graphic>
+                                                </Button>
+                                                <Button fx:id="btnBorrarReserva" mnemonicParsing="false" prefHeight="27.0" prefWidth="27.0" styleClass="button-app">
+                                                   <graphic>
+                                                      <FontAwesomeIconView glyphName="CLOSE" />
+                                                   </graphic>
+                                                </Button>
+                                                <Button fx:id="btnBorrarOldReservas" mnemonicParsing="false" prefHeight="27.0" prefWidth="27.0" styleClass="button-app">
+                                                   <graphic>
+                                                      <FontAwesomeIconView glyphName="TRASH" />
+                                                   </graphic>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <TableView fx:id="tvReservasPrin" maxHeight="1.7976931348623157E308" prefHeight="475.0" prefWidth="1010.0" VBox.vgrow="ALWAYS">
+                                            <columns>
+                                              <TableColumn fx:id="cIdReserva" prefWidth="75.0" text="ID Reserva" />
+                                              <TableColumn fx:id="cNHabitacion" prefWidth="88.0" text="Nº Habitación" />
+                                                <TableColumn fx:id="cFecha" prefWidth="88.0" text="Fecha Emisión" />
+                                                <TableColumn fx:id="cFechaEntrada" prefWidth="88.0" text="Entrada" />
+                                                <TableColumn fx:id="cFechaSalida" prefWidth="88.0" text="Salida" />
+                                                <TableColumn fx:id="cTotal" prefWidth="88.0" text="Total" />
+                                                <TableColumn fx:id="cMetodo" prefWidth="88.0" text="Método" />
+                                                <TableColumn fx:id="cObservaciones" prefWidth="88.0" text="Observaciones" />
+                                            </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <ScrollPane fx:id="clientesPane" disable="true" fitToWidth="true" hbarPolicy="NEVER" hmax="0.0" minHeight="0.0" prefHeight="607.0" prefWidth="1031.0" vbarPolicy="ALWAYS" visible="false" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+                                 <content>
+                                    <AnchorPane fx:id="anchorPaneClientScroll" prefHeight="630.0" prefWidth="1016.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" styleClass="border-label" stylesheets="@style.css" text="Clientes">
+                                             <font>
+                                                <Font name="Arial" size="65.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="tfBuscarCliente" layoutX="62.0" layoutY="134.0" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="309.0" promptText="Buscar un cliente..." styleClass="text-field-info" />
+                                          <VBox fx:id="vboxClientes" layoutX="23.0" layoutY="164.0" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" spacing="50.0">
+                                                   <children>
+                                                      <AnchorPane fx:id="clientCard" minHeight="200.0" minWidth="349.0" prefHeight="200.0" prefWidth="349.0" stylesheets="@style.css">
+                                                         <styleClass>
+                                                            <String fx:value="card" />
+                                                            <String fx:value="shadow" />
+                                                         </styleClass>
+                                                         <children>
+                                                            <Label layoutX="121.0" layoutY="37.0" text="Cliente" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="Arial" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label fx:id="nHabCard1" layoutX="316.0" layoutY="28.0" text="0" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="Arial" size="34.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <FontAwesomeIconView fill="WHITE" glyphName="HOTEL" layoutX="14.0" layoutY="176.0" size="64" />
+                                                            <Label layoutX="259.0" layoutY="153.0" text="Estado" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="Arial" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <FontAwesomeIconView glyphName="SEARCH" layoutX="30.0" layoutY="156.0" size="24" wrappingWidth="24.142857551574707" />
+                                          <Button fx:id="btnAddCliente1" layoutX="384.0" layoutY="134.0" mnemonicParsing="false" onAction="#onBtnAddClienteClick" prefHeight="27.0" prefWidth="27.0" styleClass="button-app">
+                                             <graphic>
+                                                <FontAwesomeIconView glyphName="USER_PLUS" />
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="btnActClientes1" layoutX="422.0" layoutY="134.0" mnemonicParsing="false" onAction="#onActualizarClientesClick" prefHeight="27.0" prefWidth="27.0" styleClass="button-app">
+                                             <graphic>
+                                                <FontAwesomeIconView glyphName="ROTATE_RIGHT" />
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </ScrollPane>
+                              <ScrollPane fx:id="pedidosPane" disable="true" fitToWidth="true" hbarPolicy="NEVER" hmax="0.0" minHeight="0.0" prefHeight="607.0" prefWidth="1031.0" vbarPolicy="ALWAYS" visible="false" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+                                 <content>
+                                    <AnchorPane fx:id="anchorPanePedidosScroll" prefHeight="630.0" prefWidth="1016.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" styleClass="border-label" stylesheets="@style.css" text="Pedidos">
+                                             <font>
+                                                <Font name="Arial" size="65.0" />
+                                             </font>
+                                          </Label>
+                                          <VBox fx:id="vboxPedidos" layoutX="23.0" layoutY="164.0" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" spacing="50.0">
+                                                   <children>
+                                                      <AnchorPane fx:id="pedidoCard" minHeight="200.0" minWidth="349.0" prefHeight="200.0" prefWidth="349.0" stylesheets="@style.css">
+                                                         <styleClass>
+                                                            <String fx:value="card" />
+                                                            <String fx:value="shadow" />
+                                                         </styleClass>
+                                                         <children>
+                                                            <Label layoutX="121.0" layoutY="37.0" text="Pedido" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="Arial" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label fx:id="nHabCard11" layoutX="316.0" layoutY="28.0" text="0" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="Arial" size="34.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <FontAwesomeIconView fill="WHITE" glyphName="HOTEL" layoutX="14.0" layoutY="176.0" size="64" />
+                                                            <Label layoutX="259.0" layoutY="153.0" text="Estado" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="Arial" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <Button fx:id="btnActualizarPedidos" layoutX="272.0" layoutY="38.0" mnemonicParsing="false" onAction="#onActualizarPedidosBtn" prefHeight="27.0" prefWidth="27.0" styleClass="button-app">
+                                             <graphic>
+                                                <FontAwesomeIconView glyphName="ROTATE_RIGHT" />
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </ScrollPane>
+                              <ScrollPane fx:id="empleadosPane" disable="true" fitToWidth="true" hbarPolicy="NEVER" hmax="0.0" minHeight="0.0" prefHeight="607.0" prefWidth="1031.0" vbarPolicy="ALWAYS" visible="false" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+                                 <content>
+                                    <AnchorPane fx:id="anchorPaneEmpleadosScroll" prefHeight="630.0" prefWidth="1016.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" styleClass="border-label" stylesheets="@style.css" text="Empleados">
+                                             <font>
+                                                <Font name="Arial" size="65.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="tfBuscarEmpleado" layoutX="62.0" layoutY="134.0" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="309.0" promptText="Buscar un empleado..." styleClass="text-field-info" />
+                                          <VBox fx:id="vboxEmpleados" layoutX="23.0" layoutY="164.0" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" spacing="50.0">
+                                                   <children>
+                                                      <AnchorPane fx:id="empleadoCard" minHeight="200.0" minWidth="349.0" prefHeight="200.0" prefWidth="349.0" stylesheets="@style.css">
+                                                         <styleClass>
+                                                            <String fx:value="card" />
+                                                            <String fx:value="shadow" />
+                                                         </styleClass>
+                                                         <children>
+                                                            <Label layoutX="121.0" layoutY="37.0" text="Empleado" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="Arial" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label fx:id="nHabCard12" layoutX="316.0" layoutY="28.0" text="0" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="Arial" size="34.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <FontAwesomeIconView fill="WHITE" glyphName="HOTEL" layoutX="14.0" layoutY="176.0" size="64" />
+                                                            <Label layoutX="259.0" layoutY="153.0" text="Estado" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="Arial" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <FontAwesomeIconView glyphName="SEARCH" layoutX="30.0" layoutY="156.0" size="24" wrappingWidth="24.142857551574707" />
+                                          <Button fx:id="btnAddEmpleado" layoutX="484.0" layoutY="134.0" mnemonicParsing="false" onAction="#onBtnAddEmpleadoClick" prefHeight="27.0" prefWidth="27.0" styleClass="button-app">
+                                             <graphic>
+                                                <FontAwesomeIconView glyphName="USER_PLUS" />
+                                             </graphic>
+                                          </Button>
+                                          <Label layoutX="379.0" layoutY="139.0" text="Añadir empleado:" />
+                                          <Button fx:id="btnAddUsuario" layoutX="624.0" layoutY="134.0" mnemonicParsing="false" onAction="#onBtnAddUsuarioClick" prefHeight="27.0" prefWidth="27.0" styleClass="button-app">
+                                             <graphic>
+                                                <FontAwesomeIconView glyphName="USER_PLUS" />
+                                             </graphic>
+                                          </Button>
+                                          <Label layoutX="534.0" layoutY="139.0" text="Añadir usuario:" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </ScrollPane>
+                           </children></AnchorPane>
+                     </center>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+   </tabs>
+</TabPane>

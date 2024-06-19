@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="406.0" prefWidth="555.0" stylesheets="@login-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.iesgrancapitan.proyectohotelfx.controllers.LoginController">
+   <left>
+      <AnchorPane prefHeight="406.0" prefWidth="337.0" styleClass="login-izquierda" stylesheets="@login-style.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="94.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/hotel.jpg" />
+               </image></ImageView>
+            <Label layoutX="63.0" layoutY="235.0" text="Sistema de gestión&#10;del Grand Hotel" textAlignment="CENTER">
+               <font>
+                  <Font name="Tahoma Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="386.0" text="Copyright 2024 | Herramienta desarrollada por Hugo Salamanca y Antonio Castro">
+               <font>
+                  <Font name="System Italic" size="9.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView glyphName="COPYRIGHT" layoutX="6.0" layoutY="396.0" size="9" />
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="406.0" prefWidth="241.0" BorderPane.alignment="CENTER">
+         <children>
+               <Label layoutX="32.0" layoutY="104.0" text="Iniciar Sesión" textFill="#d9ba7d">
+                   <font>
+                       <Font name="Times New Roman" size="32.0" />
+                   </font>
+               </Label>
+   
+                        <TextField fx:id="usernameField" layoutX="56.0" layoutY="156.0" prefHeight="26.0" prefWidth="166.0" promptText="Username" />
+               <PasswordField fx:id="passwordField" layoutX="55.0" layoutY="203.0" prefHeight="26.0" prefWidth="166.0" promptText="Password" />
+               <Button layoutX="21.0" layoutY="271.0" onAction="#onLoginButtonClick" prefHeight="26.0" prefWidth="201.0" text="Login" />
+            <FontAwesomeIconView fill="#d9ba7d" glyphName="USERS" layoutX="103.0" layoutY="99.0" size="35" wrappingWidth="35.25715923309326" />
+            <FontAwesomeIconView fill="#d9ba7d" glyphName="USER" layoutX="29.0" layoutY="177.0" selectionFill="BLACK" size="20" text="" />
+            <FontAwesomeIconView fill="#d9ba7d" glyphName="KEY" layoutX="26.0" layoutY="226.0" selectionFill="BLACK" size="20" />
+            <Button layoutX="202.0" layoutY="7.0" mnemonicParsing="false" onAction="#closeLoginButton" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: none;">
+               <graphic>
+                  <FontAwesomeIconView fill="#d9ba7d" glyphName="CLOSE" size="20" />
+               </graphic>
+            </Button>
+            <Label fx:id="errorLabel" layoutX="20.0" layoutY="327.0" opacity="0.0" text="Error, usuario o contraseña incorrectos" textFill="#e13b3b" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

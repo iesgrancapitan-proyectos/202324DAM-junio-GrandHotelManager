@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="506.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.iesgrancapitan.proyectohotelfx.controllers.InfoClienteController">
+   <top>
+      <AnchorPane prefHeight="64.0" prefWidth="506.0" style="-fx-background-color: linear-gradient(to right, #d9ba7d, #ad935e);" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="64.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/hotel.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="72.0" layoutY="24.0" text="Sistema de gestión del Grand Hotel" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnEliminar" layoutX="464.0" layoutY="18.0" mnemonicParsing="false" onAction="#onBtnBorrarClienteClick" prefHeight="27.0" prefWidth="27.0" styleClass="button-app">
+               <graphic>
+                  <FontAwesomeIconView glyphName="TRASH" />
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="547.0" prefWidth="506.0" style="-fx-background-color: #e2e1df;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" styleClass="border-label" text="Cliente">
+               <font>
+                  <Font name="Arial" size="33.0" />
+               </font>
+            </Label>
+            <Label layoutX="287.0" layoutY="274.0" text="Nacimiento">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dpNacimiento" layoutX="287.0" layoutY="290.0" prefHeight="26.0" prefWidth="190.0" styleClass="date-picker-hos" />
+            <TextField fx:id="tfNIF" editable="false" layoutX="12.0" layoutY="84.0" prefHeight="26.0" prefWidth="189.0" styleClass="text-field-info" />
+            <Label layoutX="13.0" layoutY="68.0" text="NIF / Documento de identidad">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfNacionalidad" layoutX="12.0" layoutY="357.0" prefHeight="26.0" prefWidth="196.0" styleClass="text-field-info" />
+            <Label layoutX="13.0" layoutY="335.0" text="Nacionalidad">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfTipoDocumento" layoutX="287.0" layoutY="84.0" prefHeight="26.0" prefWidth="189.0" styleClass="text-field-info" />
+            <Label layoutX="288.0" layoutY="68.0" text="Tipo de documento">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfNombre" layoutX="12.0" layoutY="153.0" prefHeight="26.0" prefWidth="189.0" styleClass="text-field-info" />
+            <Label layoutX="13.0" layoutY="137.0" text="Nombre">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfApellido1" layoutX="14.0" layoutY="210.0" prefHeight="26.0" prefWidth="189.0" styleClass="text-field-info" />
+            <Label layoutX="15.0" layoutY="194.0" text="1er Apellido">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfApellido2" layoutX="287.0" layoutY="210.0" prefHeight="26.0" prefWidth="189.0" styleClass="text-field-info" />
+            <Label layoutX="288.0" layoutY="194.0" text="2do Apellido">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="266.0" text="Sexo">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cbSexo" layoutX="14.0" layoutY="287.0" prefHeight="25.0" prefWidth="191.0" styleClass="text-field-info" />
+            <Button fx:id="btnActualizar" layoutX="13.0" layoutY="403.0" mnemonicParsing="false" onAction="#onBtnActualizarClick" prefHeight="25.0" prefWidth="480.0" styleClass="button-app" text="Actualizar Cliente" />
+            <Label fx:id="faltanCampos" layoutX="177.0" layoutY="441.0" opacity="0.0" text="Faltan campos por completar" textFill="RED">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

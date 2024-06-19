@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="506.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.iesgrancapitan.proyectohotelfx.controllers.HospedarViewController">
+   <top>
+      <AnchorPane prefHeight="64.0" prefWidth="506.0" style="-fx-background-color: linear-gradient(to right, #d9ba7d, #ad935e);" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="64.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/hotel.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="72.0" layoutY="24.0" text="Sistema de gestión del Grand Hotel" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="506.0" style="-fx-background-color: #e2e1df;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" styleClass="border-label" text="Hospedar">
+               <font>
+                  <Font name="Arial" size="33.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="75.0" text="Seleccionar cliente">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="317.0" text="Fecha de entrada">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfTotal" editable="false" layoutX="13.0" layoutY="398.0" prefHeight="26.0" prefWidth="176.0" styleClass="text-field-info" />
+            <Label layoutX="14.0" layoutY="376.0" text="Total en Euros">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfObservacion" layoutX="13.0" layoutY="454.0" prefHeight="26.0" prefWidth="480.0" styleClass="text-field-info" />
+            <Label layoutX="14.0" layoutY="438.0" text="Observación">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnHospedarHos" layoutX="13.0" layoutY="497.0" mnemonicParsing="false" onAction="#onBtnHospedarHosClick" prefHeight="25.0" prefWidth="480.0" styleClass="button-app" text="CONFIRMAR HOSPEDAJE" />
+            <ComboBox fx:id="cbClientes" layoutX="13.0" layoutY="97.0" prefHeight="26.0" prefWidth="407.0" styleClass="text-field-info" />
+            <DatePicker fx:id="dateFE" layoutX="14.0" layoutY="333.0" styleClass="date-picker-hos" />
+            <Label layoutX="318.0" layoutY="317.0" text="Fecha de salida">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dateFS" layoutX="318.0" layoutY="333.0" styleClass="date-picker-hos" />
+            <Button fx:id="btnAddUser" layoutX="425.0" layoutY="97.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" styleClass="button-app">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" />
+               </graphic>
+            </Button>
+            <TextField fx:id="tfNHabHos" editable="false" layoutX="357.0" layoutY="30.0" prefHeight="26.0" prefWidth="136.0" styleClass="text-field-info" />
+            <Label layoutX="358.0" layoutY="14.0" text="Nº de habitación">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="135.0" text="Lista de clientes a hospedar">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <ListView fx:id="lvClientes" layoutX="13.0" layoutY="158.0" prefHeight="124.0" prefWidth="480.0" styleClass="text-field-info" />
+            <Label layoutX="319.0" layoutY="376.0" text="Metodo de pago">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cbMetodoPago" layoutX="318.0" layoutY="398.0" prefHeight="26.0" prefWidth="175.0" styleClass="text-field-info" />
+            <Label fx:id="faltanCampos" layoutX="162.0" layoutY="535.0" opacity="0.0" text="Faltan campos por completar" textFill="RED">
+               <font>
+                  <Font name="Arial Italic" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnUndoUser" layoutX="461.0" layoutY="97.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" styleClass="button-app">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="UNDO" />
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imagenProducto"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/item1" />
+
+    <TextView
+        android:id="@+id/nombreProducto"
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/precioProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginRight="32dp"/>
+
+    <TextView
+        android:id="@+id/cantidadProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="16sp"
+        android:layout_marginRight="16dp"/>
+
+    <ImageView
+        android:id="@+id/imgRestar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/restar"/>
+
+    <ImageView
+        android:id="@+id/imgAñadir"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/sumar"/>
+
+</LinearLayout>
